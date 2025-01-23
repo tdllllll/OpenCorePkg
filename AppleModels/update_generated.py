@@ -150,6 +150,7 @@ def export_db_macinfolib(db, path, year=0):
                 f'''  .SystemProductName = "{info['SystemProductName']}",\n'''
                 f'''  .BoardProduct = "{info['BoardProduct'][0] if isinstance(info['BoardProduct'], list) else info['BoardProduct']}",\n'''
                 f'''  .BoardRevision = {f"0x{info['BoardRevision']:X}" if 'BoardRevision' in info else 'MAC_INFO_BOARD_REVISION_MISSING'},\n'''
+                f'''  .CoprocessorVersion = 0x{info.get('CoprocessorVersion', 0):X},\n'''
                 f'''  .SmcRevision = {{{', '.join(map(str, info.get('SmcRevision', [0x00])))}}},\n'''
                 f'''  .SmcBranch = {{{', '.join(map(str, info.get('SmcBranch', [0x00])))}}},\n'''
                 f'''  .SmcPlatform = {{{', '.join(map(str, info.get('SmcPlatform', [0x00])))}}},\n'''

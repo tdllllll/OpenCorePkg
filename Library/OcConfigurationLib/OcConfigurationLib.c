@@ -576,6 +576,7 @@ OC_SCHEMA
   OC_SCHEMA_INTEGER_IN ("ARTFrequency",         OC_GLOBAL_CONFIG, PlatformInfo.DataHub.ARTFrequency),
   OC_SCHEMA_STRING_IN ("BoardProduct",          OC_GLOBAL_CONFIG, PlatformInfo.DataHub.BoardProduct),
   OC_SCHEMA_DATAF_IN ("BoardRevision",          OC_GLOBAL_CONFIG, PlatformInfo.DataHub.BoardRevision),
+  OC_SCHEMA_INTEGER_IN ("CoprocessorVersion",   OC_GLOBAL_CONFIG, PlatformInfo.DataHub.CoprocessorVersion),
   OC_SCHEMA_INTEGER_IN ("DevicePathsSupported", OC_GLOBAL_CONFIG, PlatformInfo.DataHub.DevicePathsSupported),
   OC_SCHEMA_INTEGER_IN ("FSBFrequency",         OC_GLOBAL_CONFIG, PlatformInfo.DataHub.FSBFrequency),
   OC_SCHEMA_INTEGER_IN ("InitialTSC",           OC_GLOBAL_CONFIG, PlatformInfo.DataHub.InitialTSC),
@@ -592,16 +593,17 @@ OC_SCHEMA
 STATIC
 OC_SCHEMA
   mPlatformConfigurationGenericSchema[] = {
-  OC_SCHEMA_BOOLEAN_IN ("AdviseFeatures",    OC_GLOBAL_CONFIG, PlatformInfo.Generic.AdviseFeatures),
-  OC_SCHEMA_STRING_IN ("MLB",                OC_GLOBAL_CONFIG, PlatformInfo.Generic.Mlb),
-  OC_SCHEMA_BOOLEAN_IN ("MaxBIOSVersion",    OC_GLOBAL_CONFIG, PlatformInfo.Generic.MaxBIOSVersion),
-  OC_SCHEMA_INTEGER_IN ("ProcessorType",     OC_GLOBAL_CONFIG, PlatformInfo.Generic.ProcessorType),
-  OC_SCHEMA_MDATAF_IN ("ROM",                OC_GLOBAL_CONFIG, PlatformInfo.Generic.Rom),
-  OC_SCHEMA_BOOLEAN_IN ("SpoofVendor",       OC_GLOBAL_CONFIG, PlatformInfo.Generic.SpoofVendor),
-  OC_SCHEMA_STRING_IN ("SystemMemoryStatus", OC_GLOBAL_CONFIG, PlatformInfo.Generic.SystemMemoryStatus),
-  OC_SCHEMA_STRING_IN ("SystemProductName",  OC_GLOBAL_CONFIG, PlatformInfo.Generic.SystemProductName),
-  OC_SCHEMA_STRING_IN ("SystemSerialNumber", OC_GLOBAL_CONFIG, PlatformInfo.Generic.SystemSerialNumber),
-  OC_SCHEMA_STRING_IN ("SystemUUID",         OC_GLOBAL_CONFIG, PlatformInfo.Generic.SystemUuid),
+  OC_SCHEMA_BOOLEAN_IN ("AddCoprocessorEntry", OC_GLOBAL_CONFIG, PlatformInfo.Generic.AddCoprocessorEntry),
+  OC_SCHEMA_BOOLEAN_IN ("AdviseFeatures",      OC_GLOBAL_CONFIG, PlatformInfo.Generic.AdviseFeatures),
+  OC_SCHEMA_STRING_IN ("MLB",                  OC_GLOBAL_CONFIG, PlatformInfo.Generic.Mlb),
+  OC_SCHEMA_BOOLEAN_IN ("MaxBIOSVersion",      OC_GLOBAL_CONFIG, PlatformInfo.Generic.MaxBIOSVersion),
+  OC_SCHEMA_INTEGER_IN ("ProcessorType",       OC_GLOBAL_CONFIG, PlatformInfo.Generic.ProcessorType),
+  OC_SCHEMA_MDATAF_IN ("ROM",                  OC_GLOBAL_CONFIG, PlatformInfo.Generic.Rom),
+  OC_SCHEMA_BOOLEAN_IN ("SpoofVendor",         OC_GLOBAL_CONFIG, PlatformInfo.Generic.SpoofVendor),
+  OC_SCHEMA_STRING_IN ("SystemMemoryStatus",   OC_GLOBAL_CONFIG, PlatformInfo.Generic.SystemMemoryStatus),
+  OC_SCHEMA_STRING_IN ("SystemProductName",    OC_GLOBAL_CONFIG, PlatformInfo.Generic.SystemProductName),
+  OC_SCHEMA_STRING_IN ("SystemSerialNumber",   OC_GLOBAL_CONFIG, PlatformInfo.Generic.SystemSerialNumber),
+  OC_SCHEMA_STRING_IN ("SystemUUID",           OC_GLOBAL_CONFIG, PlatformInfo.Generic.SystemUuid),
 };
 
 STATIC

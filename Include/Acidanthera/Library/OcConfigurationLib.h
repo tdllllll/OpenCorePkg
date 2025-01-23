@@ -492,16 +492,17 @@ OC_DECLARE (OC_NVRAM_CONFIG)
 **/
 
 #define OC_PLATFORM_GENERIC_CONFIG_FIELDS(_, __) \
-  _(OC_STRING                   , SystemProductName  ,     , OC_STRING_CONSTR ("", _, __)                 , OC_DESTR (OC_STRING) ) \
-  _(OC_STRING                   , SystemSerialNumber ,     , OC_STRING_CONSTR ("", _, __)                 , OC_DESTR (OC_STRING) ) \
-  _(OC_STRING                   , SystemUuid         ,     , OC_STRING_CONSTR ("", _, __)                 , OC_DESTR (OC_STRING) ) \
-  _(OC_STRING                   , Mlb                ,     , OC_STRING_CONSTR ("", _, __)                 , OC_DESTR (OC_STRING) ) \
-  _(OC_STRING                   , SystemMemoryStatus ,     , OC_STRING_CONSTR ("Auto", _, __)             , OC_DESTR (OC_STRING) ) \
-  _(UINT16                      , ProcessorType      ,     , 0                                            , () )                   \
-  _(UINT8                       , Rom                , [6] , {0}                                          , () )                   \
-  _(BOOLEAN                     , SpoofVendor        ,     , FALSE                                        , () )                   \
-  _(BOOLEAN                     , AdviseFeatures     ,     , FALSE                                        , () )                   \
-  _(BOOLEAN                     , MaxBIOSVersion     ,     , FALSE                                        , () )
+  _(OC_STRING                   , SystemProductName   ,     , OC_STRING_CONSTR ("", _, __)                 , OC_DESTR (OC_STRING) ) \
+  _(OC_STRING                   , SystemSerialNumber  ,     , OC_STRING_CONSTR ("", _, __)                 , OC_DESTR (OC_STRING) ) \
+  _(OC_STRING                   , SystemUuid          ,     , OC_STRING_CONSTR ("", _, __)                 , OC_DESTR (OC_STRING) ) \
+  _(OC_STRING                   , Mlb                 ,     , OC_STRING_CONSTR ("", _, __)                 , OC_DESTR (OC_STRING) ) \
+  _(OC_STRING                   , SystemMemoryStatus  ,     , OC_STRING_CONSTR ("Auto", _, __)             , OC_DESTR (OC_STRING) ) \
+  _(UINT16                      , ProcessorType       ,     , 0                                            , () )                   \
+  _(UINT8                       , Rom                 , [6] , {0}                                          , () )                   \
+  _(BOOLEAN                     , SpoofVendor         ,     , FALSE                                        , () )                   \
+  _(BOOLEAN                     , AdviseFeatures      ,     , FALSE                                        , () )                   \
+  _(BOOLEAN                     , MaxBIOSVersion      ,     , FALSE                                        , () )                   \
+  _(BOOLEAN                     , AddCoprocessorEntry ,     , FALSE                                        , () )
 OC_DECLARE (OC_PLATFORM_GENERIC_CONFIG)
 
 #define OC_PLATFORM_DATA_HUB_CONFIG_FIELDS(_, __) \
@@ -516,6 +517,7 @@ OC_DECLARE (OC_PLATFORM_GENERIC_CONFIG)
   _(UINT64                      , FSBFrequency        ,     , 0                                , () )                   \
   _(UINT64                      , ARTFrequency        ,     , 0                                , () )                   \
   _(UINT32                      , DevicePathsSupported,     , 0                                , () )                   \
+  _(UINT32                      , CoprocessorVersion  ,     , 0                                , () )                   \
   _(UINT8                       , SmcRevision         , [6] , {0}                              , () )                   \
   _(UINT8                       , SmcBranch           , [8] , {0}                              , () )                   \
   _(UINT8                       , SmcPlatform         , [8] , {0}                              , () )

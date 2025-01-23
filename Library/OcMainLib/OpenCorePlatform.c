@@ -98,6 +98,10 @@ OcPlatformUpdateDataHub (
       Data.DevicePathsSupported = &Config->PlatformInfo.DataHub.DevicePathsSupported;
     }
 
+    if (Config->PlatformInfo.DataHub.CoprocessorVersion != 0) {
+      Data.CoprocessorVersion = &Config->PlatformInfo.DataHub.CoprocessorVersion;
+    }
+
     if (  (Config->PlatformInfo.DataHub.SmcRevision[0] != 0)
        || (Config->PlatformInfo.DataHub.SmcRevision[1] != 0)
        || (Config->PlatformInfo.DataHub.SmcRevision[2] != 0)
@@ -154,6 +158,10 @@ OcPlatformUpdateDataHub (
     InitialTSC                = 0;
     Data.InitialTSC           = &InitialTSC;
     Data.DevicePathsSupported = &MacInfo->DataHub.DevicePathsSupported[0];
+
+    if (Config->PlatformInfo.Generic.AddCoprocessorEntry && (MacInfo->DataHub.CoprocessorVersion[0] != 0)) {
+      Data.CoprocessorVersion = &MacInfo->DataHub.CoprocessorVersion[0];
+    }
 
     Data.SmcRevision = &MacInfo->DataHub.SmcRevision[0];
     Data.SmcBranch   = &MacInfo->DataHub.SmcBranch[0];

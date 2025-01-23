@@ -120,6 +120,7 @@ GetMacInfo (
   }
 
   MacInfo->DataHub.DevicePathsSupported = &mDevicePathsSupported;
+  MacInfo->DataHub.CoprocessorVersion   = &InternalEntry->CoprocessorVersion;
   //
   // T2-based macs have no SMC branch or revision.
   //
